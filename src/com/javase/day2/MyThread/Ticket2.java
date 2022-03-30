@@ -29,8 +29,18 @@ public class Ticket2 extends Thread{
     }
 }
 
-class Ticket2Test(){
+class Ticket2Test{
     public static void main(String[] args) {
+        Thread thread1 = new Ticket2();
+        Thread thread2 = new Ticket2();
+        Thread thread3 = new Ticket2();
 
+        thread1.setName("01");
+        thread2.setName("02");
+        thread3.setName("03");
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
     }
 }
